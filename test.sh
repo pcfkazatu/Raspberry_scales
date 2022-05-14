@@ -6,3 +6,6 @@ git commit -m "first commit"
 git branch -M main 
 git remote add origin git@github.com:pcfkazatu/Raspberry_scales.git
  git push -u origin основной
+ 
+
+ #hello
