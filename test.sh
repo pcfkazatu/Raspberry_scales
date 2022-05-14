@@ -8,4 +8,5 @@ git remote add origin git@github.com:pcfkazatu/Raspberry_scales.git
  git push -u origin основной
  
 
- 
+ Projects/PCF/RASPBERRY_SCALES$ 
+
