@@ -43,53 +43,29 @@ sleep 1
 done 
 cd ..
 
-#mkdir /home/pi/Update
-#cd /home/pi/Update/
-#git clone https://github.com/pcfkazatu/pcf_kazatu_project.git
-
-#Установка проекта
-#cd /home/pi/Documents/
-#git clone https://github.com/AidarAlimbayev/pcf_lora_project.git
-#cp software/main/main_pcf_ver4.py /home/pi/
-#chmod +x /home/pi/main_pcf_ver4.py
-#cp software/main/lib_pcf_ver4.py /home/pi/
-#chmod +x /home/pi/lib_pcf_ver4.py
-##cp pcf_lora_project/software/main/main_aid_ver3.py /home/pi/
-##cp pcf_lora_project/software/main/main_lib_ver3.py /home/pi/
-#cp software/main/pcf.service /etc/systemd/system/
-#chmod +x /etc/systemd/system/pcf.service
-#cp software/main/99-serial-logger.rules /etc/udev/rules.d/
-#chmod +x /etc/udev/rules.d/99-serial-logger.rules
-
-# echo 'Project has loaded'
-# echo '####################'
-# for ((i = 1; i <= 3; i++))
-# do
-# echo "...$i"
-# sleep 1
-# done 
 
 #Установка библиотек для python
-#pip install os-sys          #import os
-#pip install jsonlib         # - Не уверен /import json 
-#pip install requests        #import requests
-#pip install pycopy-binascii #import binascii
-# pip install serial          #import serial
-# pip install python-time     #import time
-# pip install sockets         #import socket
-# pip install python-csv      #import csv
-# pip install regex           #import re
-#pip3 install firmata
-# pip install httplib2 --upgrade
-#pip install logging         #import logging
-#pip install statistics      #import statistics
-# echo 'All libraries has loaded'
-# echo '####################'
-# for ((i = 1; i <= 3; i++))
-# do
-# echo "...$i"
-# sleep 1
-# done 
+pip install os-sys          #import os
+pip install jsonlib         # - Не уверен /import json 
+pip install requests        #import requests
+pip install pycopy-binascii #import binascii
+pip install serial          #import serial
+pip install python-time     #import time
+pip install sockets         #import socket
+pip install python-csv      #import csv
+pip install regex           #import re
+pip3 install firmata
+pip install httplib2 --upgrade
+pip install logging         #import logging
+pip install statistics      #import statistics
+
+echo 'All libraries has loaded'
+echo '####################'
+for ((i = 1; i <= 3; i++))
+do
+echo "...$i"
+sleep 1
+done 
 
 #Установка Arduino IDE. *Примечание, перед установкой arduino соединить с raspberry
 mkdir /home/pi/arduino
