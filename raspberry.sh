@@ -1,48 +1,17 @@
 #!/usr/bin/env bash 
 set -Eeuo pipefail
 
-script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
-echo "Введите пароль для системы Raspbian."
-echo "Введите пароль: 321" 
-
 apt update && apt upgrade -y                    #Установка обновлении 
 apt-get dist-upgrade                #Обновление raspbian до последней версии
 
 #Внешний ip адрес
 wget -qO- eth0.me >> myip.txt
 
-#Установка Git
-apt-get install git
-apt install software-properties-common -y
-add-apt-repository ppa:deadsnakes/ppa
-
 #Локали 
 # apt-get install locales
 # nano /etc/environment >> LANG="ru_RU.UTF-8"
 # nano /etc/locale.gen >> ru_RU.UTF-8 UTF-8
 # locale-gen #Чтобы проверить ввести `locale -a`. На выходе должно быть POSIX en_US.utf8 ru_RU 
-
-#Установка Python
-#apt install python2
-apt install python3.10
-apt update
-wget https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tgz
-tar -xf Python-3.10.*.tgz
-cd Python-3.10.*/
-./configure --enable-optimizations
-make -j $(nproc)
-make altinstall
-apt install -y python3-pip
-echo `python3 -V`
-echo 'The Python has loaded'
-echo '###################'
-for ((i = 1; i <= 3; i++))
-do
-echo "...$i"
-sleep 1
-done 
-cd ..
-
 
 #Установка библиотек для python
 pip install os-sys          #import os
@@ -74,16 +43,6 @@ wget https://downloads.arduino.cc/arduino-1.8.19-linuxarm.tar.xz
 tar -xf arduino-1.8.19-linuxarm.tar.xz
 mv arduino-1.8.19 /opt
 /opt/arduino-1.8.19/install.sh
-
-#Сначала проверяем подключен ли arduino 
-TTYACM0=$(find /dev -name ttyACM0)
-if test -z $TTYACM0; then
-	echo "Arduino not found..."
-    sleep 3
-	exit
-else
-	echo "Arduino connected!"
-fi
 
 # Проверяем и подключаем user-a к подгруппе dialout
 WHOAMI=$(whoami)
@@ -125,7 +84,8 @@ echo "#########" >> teamviewer_info.txt
 teamviewer info >> teamviewer_info.txt
 echo "TeamViewer done"
 
-chmod a+rw /dev/ttyACM0
+# chmod a+rw /dev/ttyACM0
+
 udevadm trigger
 echo "All Done!"
 
