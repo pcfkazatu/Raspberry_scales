@@ -1,8 +1,8 @@
 #!/usr/bin/env bash 
 set -Eeuo pipefail
 
-apt update && apt upgrade -y                    #Установка обновлении 
-apt-get dist-upgrade                #Обновление raspbian до последней версии
+# apt update && apt upgrade -y                    #Установка обновлении 
+# apt-get dist-upgrade                #Обновление raspbian до последней версии
 
 #Внешний ip адрес
 wget -qO- eth0.me >> myip.txt
