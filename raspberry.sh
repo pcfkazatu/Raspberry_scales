@@ -14,7 +14,7 @@ wget -qO- eth0.me >> myip.txt
 # locale-gen #Чтобы проверить ввести `locale -a`. На выходе должно быть POSIX en_US.utf8 ru_RU 
 
 #Установка библиотек для python
-pip install os-sys          #import os
+#pip install os-sys          #import os
 pip install jsonlib         # - Не уверен /import json 
 pip install requests        #import requests
 pip install pycopy-binascii #import binascii
