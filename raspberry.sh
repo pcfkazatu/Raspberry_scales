@@ -15,18 +15,18 @@ wget -qO- eth0.me >> myip.txt
 
 #Установка библиотек для python
 #pip install os-sys          #import os
-pip install jsonlib         # - Не уверен /import json 
-pip install requests        #import requests
-pip install pycopy-binascii #import binascii
-pip install serial          #import serial
-pip install python-time     #import time
-pip install sockets         #import socket
-pip install python-csv      #import csv
-pip install regex           #import re
-pip3 install firmata
-pip install httplib2 --upgrade
-pip install logging         #import logging
-pip install statistics      #import statistics
+#pip install jsonlib         # - Не уверен /import json 
+#pip install requests        #import requests
+#pip install pycopy-binascii #import binascii
+#pip install serial          #import serial
+#pip install python-time     #import time
+#pip install sockets         #import socket
+#pip install python-csv      #import csv
+#pip install regex           #import re
+#pip3 install firmata
+#pip install httplib2 --upgrade
+#pip install logging         #import logging
+#pip install statistics      #import statistics
 
 echo 'All libraries has loaded'
 echo '####################'
