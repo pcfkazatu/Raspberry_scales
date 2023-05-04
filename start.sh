@@ -1,3 +1,6 @@
+apt-get update
+apt-get upgrade
+
 apt install python3-pip
 
 pip3 install loguru
@@ -13,6 +16,4 @@ chmod a+rw /dev/ttyACM0
 
 timedatectl set-timezone Asia/Almaty
 
-cd /home/ubuntu/scales/
-mv /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init-orig.yaml
-cp 50-cloud-init.yam /etc/netplan/
+
