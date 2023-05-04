@@ -15,6 +15,6 @@ network:
             access-points:
                 "NU":
                     password: "1234512345"
-                "REET":
+                "REET1212":
                     password: "19571212"
             dhcp4: true
