@@ -21,3 +21,6 @@ systemctl start pcf.service
 systemctl enable pcf.service
 systemctl status pcf.service
 
+
+systemctl enable cron.service
+
