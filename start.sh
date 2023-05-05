@@ -16,7 +16,7 @@ chmod a+rw /dev/ttyACM0
 
 timedatectl set-timezone Asia/Almaty
 
-cp pcf.service /etc/systemd/system/
+cp /home/ubuntu/scales/pcf.service /etc/systemd/system/
 systemctl start pcf.service
 systemctl enable pcf.service
 systemctl status pcf.service
