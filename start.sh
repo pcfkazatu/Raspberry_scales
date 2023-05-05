@@ -1,6 +1,7 @@
 apt-get update
 apt-get upgrade
 
+apt install net-tools
 apt install python3-pip
 
 pip3 install loguru
