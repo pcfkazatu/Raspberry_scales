@@ -8,14 +8,13 @@ network:
         eth0:
             dhcp4: no
             addresses: [192.168.1.249/24]
-            gateway4: 192.168.1.1
             optional: true
     version: 2
     wifis:
         wlan0:
             access-points:
-                "NU":
-                    password: "1234512345"
+#                "NU":
+#                    password: "1234512345"
                 "REET1212":
                     password: "19571212"
             dhcp4: true
