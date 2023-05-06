@@ -1,5 +1,11 @@
 chmod 700 /home/ubuntu/scales/duck.sh
 
-crontab -l|sed "\$a*/5 * * * * /home/ubuntu/scales/duck.sh >/dev/null 2>&1"|crontab -
+#write out current crontab
+crontab -l > mycron
+#echo new cron into cron file
+echo "*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1" >> mycron
+#install new cron file
+crontab mycron
+rm mycron
 
 bash duck.sh
