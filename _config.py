@@ -27,7 +27,7 @@ import configparser
 import os
 from loguru import logger
 
-path = "config.ini"         # Название конфиг файла config.ini
+path = "/home/ubuntu/scales/config.ini"         # Название конфиг файла config.ini
 
 def create_config():        # Функция создания конфиг файла
     try:
