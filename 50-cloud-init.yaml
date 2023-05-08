@@ -4,6 +4,8 @@
 # /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
 # network: {config: disabled}
 network:
+    version: 2
+    renderer: networkd
     ethernets:
         eth0:
             dhcp4: no
@@ -13,8 +15,6 @@ network:
     wifis:
         wlan0:
             access-points:
-#                "NU":
-#                    password: "1234512345"
                 "REET1212":
                     password: "19571212"
             dhcp4: true
