@@ -20,7 +20,7 @@ import time
 logger.add('log/scales_{time}.log', format="{time} {level} {message}", 
 level="DEBUG", rotation="1 day", compression="zip")             # Настройка логгера
 
-@logger.catch()         # Показывает ошибки, не работает если их обрабатывать
+#@logger.catch()         # Показывает ошибки, не работает если их обрабатывать
 def main():
     try:
         type_scales = cfg.get_setting("Parameters", "serial_number") # Забираем серийный номер из config.ini
