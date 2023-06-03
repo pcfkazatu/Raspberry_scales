@@ -4,8 +4,8 @@ Description=pcf.service Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/Raspberry_scales/scales/main_pcf.py
-WorkingDirectory=/home/ubuntu/
+ExecStart=/usr/bin/python3 /home/pi/Raspberry_scales/scales61v2-test/main_pcf.py
+WorkingDirectory=/home/pi/Raspberry_scales/scales61v2/
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
